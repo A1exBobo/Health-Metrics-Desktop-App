@@ -16,5 +16,10 @@ namespace Health_Metrics_Desktop_App.Forms
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //use the savefunction from the controller 
+        }
     }
 }

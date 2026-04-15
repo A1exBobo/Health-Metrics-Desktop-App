@@ -15,10 +15,11 @@ namespace Health_Metrics_Desktop_App.Classes
         public double Height;
         public double Mass;
 
-        public Person(string firstname,string lastname,int age,double height,double mass) 
+        public Person(string firstname,string lastname,string fatherinitials,int age,double height,double mass) 
         {
             FirstName = firstname;
             LastName = lastname;
+            FatherInitials = fatherinitials;
             Age = age;
             Height = height;
             Mass = mass;

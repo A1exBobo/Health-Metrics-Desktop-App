@@ -52,7 +52,8 @@
     <Compile Include="Classes\Calculate\PICalculator.cs" />
     <Compile Include="Classes\Database\DatabaseInitializer.cs" />
     <Compile Include="Classes\Database\QueryExecutor.cs" />
-    <Compile Include="Classes\Person.cs" />
+    <Compile Include="Classes\Person\Person.cs" />
+    <Compile Include="Controllers\AddPersonFormController.cs" />
     <Compile Include="Forms\AddPers.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -71,6 +72,7 @@
     <Compile Include="Forms\RowModifierForm.Designer.cs">
       <DependentUpon>RowModifierForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controllers\IndexFormController.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\AddPers.resx">
@@ -101,9 +103,16 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Queries\CreatePersonTable.sql" />
+    <Folder Include="Data\Images\" />
+    <Folder Include="Data\Plots\" />
+    <Folder Include="Queries\TableQueries\PersonRelatedTables\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Queries\TableQueries\DishRelatedTables\CreateDishTable.sql" />
+    <Content Include="Queries\Buttons\InsertMeasurement.sql" />
+    <Content Include="Queries\TableQueries\DishRelatedTables\CreateNutrientTable.sql" />
+    <Content Include="Queries\Buttons\InsertNewPerson.sql" />
     <Content Include="Queries\init.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
