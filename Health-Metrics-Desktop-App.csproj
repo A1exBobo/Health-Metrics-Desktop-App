@@ -47,6 +47,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Calculate\BMICalculator.cs" />
+    <Compile Include="Classes\Calculate\Calculator.cs" />
+    <Compile Include="Classes\Calculate\PICalculator.cs" />
     <Compile Include="Classes\Database\DatabaseInitializer.cs" />
     <Compile Include="Classes\Database\QueryExecutor.cs" />
     <Compile Include="Classes\Person.cs" />
