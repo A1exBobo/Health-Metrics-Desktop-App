@@ -10,18 +10,11 @@ using System.Windows.Forms;
 
 namespace Health_Metrics_Desktop_App.Forms
 {
-    public partial class AddPers : Form
+    public partial class NutrientForm : Form
     {
-        public AddPers()
+        public NutrientForm()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //use the savefunction from the controller 
-            //execute query(Inserrt new person ) 
-            //display into the combobox
         }
     }
 }

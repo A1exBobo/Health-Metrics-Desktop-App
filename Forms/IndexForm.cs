@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Health_Metrics_Desktop_App.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,22 @@ namespace Health_Metrics_Desktop_App
         public IndexForm()
         {
             InitializeComponent();
+        }
+
+
+        //save button
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //execute query(insertMeasurement)
+
+            //display some content in the texboxes 
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            //takes me to AddpersonForm
+            AddPers AddPers = new AddPers();
+            AddPers.Show();
         }
     }
 }
