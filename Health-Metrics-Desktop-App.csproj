@@ -115,10 +115,12 @@
     <Folder Include="Queries\TableQueries\PersonRelatedTables\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Queries\Buttons\AddPersFormButtonQueries\DeletePersonQuery.sql" />
+    <Content Include="Queries\Buttons\IndexFormButtonQueries\DeleteMeasurement.sql" />
     <Content Include="Queries\TableQueries\DishRelatedTables\CreateDishTable.sql" />
-    <Content Include="Queries\Buttons\InsertMeasurement.sql" />
+    <Content Include="Queries\Buttons\IndexFormButtonQueries\InsertMeasurement.sql" />
     <Content Include="Queries\TableQueries\DishRelatedTables\CreateNutrientTable.sql" />
-    <Content Include="Queries\Buttons\InsertNewPerson.sql" />
+    <Content Include="Queries\Buttons\AddPersFormButtonQueries\InsertNewPerson.sql" />
     <Content Include="Queries\init.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

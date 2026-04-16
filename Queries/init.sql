@@ -27,6 +27,8 @@ BEGIN
     CREATE TABLE PersonMeasurements (
         Id INT PRIMARY KEY IDENTITY,
         PersonId INT NOT NULL,
+        Height FLOAT NOT NULL,
+        Mass FLOAT NOT NULL,
         BMI FLOAT NOT NULL,
         PI FLOAT NOT NULL,
         CalculationDate DATETIME NOT NULL DEFAULT GETDATE(),

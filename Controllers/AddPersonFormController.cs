@@ -93,7 +93,12 @@ namespace Health_Metrics_Desktop_App.Controllers
 
         }
 
-
+        public void AddPersonButton()
+        {
+            //here comes the button logic 
+            //call the query exection ( Insert new person) 
+        }
+        
 
     }
 }
