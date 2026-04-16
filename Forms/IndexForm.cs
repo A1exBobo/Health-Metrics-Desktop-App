@@ -1,4 +1,5 @@
 ﻿using Health_Metrics_Desktop_App.Forms;
+using Health_Metrics_Desktop_App.Handlers;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,9 +23,13 @@ namespace Health_Metrics_Desktop_App
         //save button
         private void button1_Click(object sender, EventArgs e)
         {
-            //execute query(insertMeasurement)
+            var controller = new IndexFormController();
 
-            //display some content in the texboxes 
+            controller.SaveButton(
+                (int)comboBox1.SelectedValue,
+                (float)numericUpDown1.Value,
+                (float)numericUpDown2.Value
+            );
         }
 
         private void button5_Click(object sender, EventArgs e)

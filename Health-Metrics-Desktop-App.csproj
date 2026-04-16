@@ -116,6 +116,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Queries\Buttons\AddPersFormButtonQueries\DeletePersonQuery.sql" />
+    <Content Include="Queries\Buttons\AddPersFormButtonQueries\SelectPersAndPersID.sql" />
     <Content Include="Queries\Buttons\IndexFormButtonQueries\DeleteMeasurement.sql" />
     <Content Include="Queries\TableQueries\DishRelatedTables\CreateDishTable.sql" />
     <Content Include="Queries\Buttons\IndexFormButtonQueries\InsertMeasurement.sql" />
