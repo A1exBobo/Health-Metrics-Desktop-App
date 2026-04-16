@@ -38,5 +38,15 @@ namespace Health_Metrics_Desktop_App
             AddPers AddPers = new AddPers();
             AddPers.Show();
         }
+
+        private void IndexForm_Load(object sender, EventArgs e)
+        {
+            var executor = new QueryExecutor();
+
+            comboBox1.DataSource = executor.ExecuteQueryFromResource(QueryExecutor.SqlFiles.SelectPerson);
+            comboBox1.DisplayMember = "FullName";
+            comboBox1.ValueMember = "PersonId";
+            comboBox1.SelectedIndex = 0;
+        }
     }
 }

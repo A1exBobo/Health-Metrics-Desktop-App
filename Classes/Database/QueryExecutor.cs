@@ -3,6 +3,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using System.Linq;
 using System.Reflection;
 
 public class QueryExecutor
@@ -15,20 +16,6 @@ public class QueryExecutor
             .ConnectionStrings["MyDb"].ConnectionString;
     }
 
-    public static class SqlFiles
-    {
-        public const string DeletePerson = "DeletePersonQuery.sql";
-        public const string InsertPerson = "InsertNewPerson.sql";
-        public const string SelectPerson = "SelectPersAndPersID.sql";
-        public const string InsertMeasurements = "InsertMeasurement.sql";
-       //etc...
-
-        /*
-         usage 
-        ExecuteQueryFromResource(SqlFiles.GetUsers);
-         */
-
-    }
 
     public DataTable ExecuteQuery(string query, params SqlParameter[] parameters)
     {
@@ -53,24 +40,29 @@ public class QueryExecutor
         return table;
     }
 
+    public static class SqlFiles
+    {
+        public const string InsertPerson = @"Queries\Buttons\AddPersFormButtonQueries\insertNewPerson.sql";
+        public const string DeletePerson = @"Queries\Buttons\AddPersFormButtonQueries\DeletePersonQuery.sql";
+        public const string SelectPerson = @"Queries\Buttons\AddPersFormButtonQueries\SelectPersAndPersID.sql";
+        public const string InsertMeasurements = @"Queries\Buttons\AddPersFormButtonQueries\InsertMeasurement.sql";
+        //etc...
+
+        /*
+         usage 
+        ExecuteQueryFromResource(SqlFiles.GetUsers);
+         */
+
+    }
 
     private string GetSql(string fileName)
     {
-        var assembly = Assembly.GetExecutingAssembly();
+        string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, fileName);
 
-        // Adjust namespace to match your project
-        string resourceName = $"{assembly.GetName().Name}.Queries.{fileName}";
+        if (!File.Exists(path))
+            throw new Exception($"SQL file not found: {path}");
 
-        using (var stream = assembly.GetManifestResourceStream(resourceName))
-        {
-            if (stream == null)
-                throw new Exception($"SQL resource not found: {resourceName}");
-
-            using (var reader = new StreamReader(stream))
-            {
-                return reader.ReadToEnd();
-            }
-        }
+        return File.ReadAllText(path);
     }
 
     public DataTable ExecuteQueryFromResource(string fileName, params SqlParameter[] parameters)

@@ -115,13 +115,23 @@
     <Folder Include="Queries\TableQueries\PersonRelatedTables\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Queries\Buttons\AddPersFormButtonQueries\DeletePersonQuery.sql" />
-    <Content Include="Queries\Buttons\AddPersFormButtonQueries\SelectPersAndPersID.sql" />
-    <Content Include="Queries\Buttons\IndexFormButtonQueries\DeleteMeasurement.sql" />
+    <Content Include="Queries\Buttons\AddPersFormButtonQueries\DeletePersonQuery.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Queries\Buttons\AddPersFormButtonQueries\SelectPersAndPersID.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Queries\Buttons\IndexFormButtonQueries\DeleteMeasurement.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Queries\TableQueries\DishRelatedTables\CreateDishTable.sql" />
-    <Content Include="Queries\Buttons\IndexFormButtonQueries\InsertMeasurement.sql" />
+    <Content Include="Queries\Buttons\IndexFormButtonQueries\InsertMeasurement.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Queries\TableQueries\DishRelatedTables\CreateNutrientTable.sql" />
-    <Content Include="Queries\Buttons\AddPersFormButtonQueries\InsertNewPerson.sql" />
+    <Content Include="Queries\Buttons\AddPersFormButtonQueries\InsertNewPerson.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Content Include="Queries\init.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

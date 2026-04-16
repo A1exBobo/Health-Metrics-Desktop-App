@@ -353,6 +353,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "IndexForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.IndexForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
