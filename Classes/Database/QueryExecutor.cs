@@ -42,10 +42,10 @@ public class QueryExecutor
 
     public static class SqlFiles
     {
-        public const string InsertPerson = @"Queries\Buttons\AddPersFormButtonQueries\insertNewPerson.sql";
+        public const string InsertPerson = @"Queries\Buttons\AddPersFormButtonQueries\InsertNewPerson.sql";
         public const string DeletePerson = @"Queries\Buttons\AddPersFormButtonQueries\DeletePersonQuery.sql";
         public const string SelectPerson = @"Queries\Buttons\AddPersFormButtonQueries\SelectPersAndPersID.sql";
-        public const string InsertMeasurements = @"Queries\Buttons\AddPersFormButtonQueries\InsertMeasurement.sql";
+        public const string InsertMeasurements = @"Queries\Buttons\IndexFormButtonQueries\InsertMeasurement.sql";
         //etc...
 
         /*
