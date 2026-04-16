@@ -54,7 +54,7 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.button3 = new System.Windows.Forms.Button();
+            this.DeleteRowButton = new System.Windows.Forms.Button();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -117,18 +117,19 @@
             this.label9.AutoSize = true;
             this.label9.Location = new System.Drawing.Point(124, 149);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 16);
+            this.label9.Size = new System.Drawing.Size(75, 16);
             this.label9.TabIndex = 19;
-            this.label9.Text = "Weight";
+            this.label9.Text = "Weight (kg)";
+            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(124, 75);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 16);
+            this.label8.Size = new System.Drawing.Size(98, 16);
             this.label8.TabIndex = 18;
-            this.label8.Text = "Height";
+            this.label8.Text = "Height (meters)";
             // 
             // button5
             // 
@@ -145,9 +146,9 @@
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(29, 7);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(44, 16);
+            this.label7.Size = new System.Drawing.Size(99, 16);
             this.label7.TabIndex = 16;
-            this.label7.Text = "label7";
+            this.label7.Text = "Choose person";
             // 
             // comboBox1
             // 
@@ -271,27 +272,59 @@
             // 
             // numericUpDown2
             // 
+            this.numericUpDown2.DecimalPlaces = 1;
+            this.numericUpDown2.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.numericUpDown2.Location = new System.Drawing.Point(106, 168);
+            this.numericUpDown2.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.numericUpDown2.Minimum = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown2.TabIndex = 1;
-
-            this.numericUpDown2.Minimum = 30M;
-            this.numericUpDown2.Maximum = 300M;
-            this.numericUpDown2.Increment = 0.1M;
-            this.numericUpDown2.DecimalPlaces = 1;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
             // 
             // numericUpDown1
             // 
+            this.numericUpDown1.DecimalPlaces = 1;
+            this.numericUpDown1.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
             this.numericUpDown1.Location = new System.Drawing.Point(106, 94);
+            this.numericUpDown1.Maximum = new decimal(new int[] {
+            23,
+            0,
+            0,
+            65536});
+            this.numericUpDown1.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            65536});
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown1.TabIndex = 0;
-
-            this.numericUpDown1.Minimum = 1.2M;
-            this.numericUpDown1.Maximum = 2.3M;
-            this.numericUpDown1.Increment = 0.1M;
-            this.numericUpDown1.DecimalPlaces = 1;
+            this.numericUpDown1.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            65536});
             // 
             // panel2
             // 
@@ -314,20 +347,21 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.button3);
+            this.panel3.Controls.Add(this.DeleteRowButton);
             this.panel3.Location = new System.Drawing.Point(628, 347);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(163, 230);
             this.panel3.TabIndex = 2;
             // 
-            // button3
+            // DeleteRowButton
             // 
-            this.button3.Location = new System.Drawing.Point(30, 97);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(106, 23);
-            this.button3.TabIndex = 18;
-            this.button3.Text = "Delete Row";
-            this.button3.UseVisualStyleBackColor = true;
+            this.DeleteRowButton.Location = new System.Drawing.Point(30, 97);
+            this.DeleteRowButton.Name = "DeleteRowButton";
+            this.DeleteRowButton.Size = new System.Drawing.Size(106, 23);
+            this.DeleteRowButton.TabIndex = 18;
+            this.DeleteRowButton.Text = "Delete Row";
+            this.DeleteRowButton.UseVisualStyleBackColor = true;
+            this.DeleteRowButton.Click += new System.EventHandler(this.button3_Click);
             // 
             // radioButton1
             // 
@@ -411,7 +445,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button DeleteRowButton;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;

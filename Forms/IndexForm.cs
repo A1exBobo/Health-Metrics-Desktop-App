@@ -34,6 +34,13 @@ namespace Health_Metrics_Desktop_App
             {
                 var controller = new IndexFormController();
                 controller.SaveButton(personId, height, mass);
+
+                textBox1.Clear(); 
+                textBox3.Clear();
+
+                numericUpDown1.Value = numericUpDown1.Minimum;
+                numericUpDown2.Value = numericUpDown2.Minimum;
+
             }
             catch (Exception ex)
             {
@@ -81,6 +88,16 @@ namespace Health_Metrics_Desktop_App
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
