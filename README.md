@@ -4,3 +4,9 @@ This is a Windows Forms desktop application designed to track personal health me
 
 The application allows users to manage multiple people, record historical data (weight, height, date), and automatically calculate health indicators with validation and feedback.
 
+## Development status : Pre-Alpha
+
+## Class Diagram Schema
+
+![Class Diagram Schema](DocumentationResources/ClassDiagram.png)
+
